@@ -12,12 +12,22 @@
 
 <body>
     <div class="container border">
-        <div class="btnRow row justify-content-center">
-            <div class="col-md-4 border"><button class="btn btn-primary">Generate Die</button></div>
-            <div class="col-md-4 border"><button class="btn btn-success">Roll Dice</button></div>
-            <div class="col-md-4 border"><button class="btn btn-info">Dice Sum</button></div>
+        <div class="row justify-content-center text-center p-2" id="btnRow">
+            <div class="col-md-4 border">
+                <button class="btn btn-primary" id="generatorBtn">Generate Die</button>
+            </div>
+            <div class="col-md-4 border">
+                <button class="btn btn-success" id="rollBtn">Roll Dice</button>
+            </div>
+            <div class="col-md-4 border">
+                <button class="btn btn-info" id="sumBtn">Dice Sum</button>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center p-2" id="diceContainer">
+
         </div>
     </div>
+
 
 
     <script src="scripts.js"></script>
