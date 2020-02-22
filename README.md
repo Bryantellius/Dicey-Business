@@ -33,7 +33,7 @@ Hints
 
 Above & Beyond
 
-*Try extending the functionality of this lab to support the following features. They are listed in order from easiest to hardest to implement.
+*Try extending the functionality of this lab to support the following features. They are listed in order from easiest to hardest to implement:
 
 *Create a sumDice function and a button that triggers it. It should add up the current face value of all the dice on the page and display an alert with the sum.
 
