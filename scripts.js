@@ -14,22 +14,24 @@ rollBtn.addEventListener('click', ()=>{
     console.log(dieArr);
     dieArr.forEach((object)=>{
         object.value = Math.round(Math.random() * (6 - 1) + 1);
-        newDie.textContent = object.value;
+        object.div.textContent = object.value;
     })
 })
 
 class Die {
     constructor() {
+        this.value;
+        this.div;
         this.roll();
         this.createDie();
         dieArr.push(this);
-        
     }
 
     createDie = () => {
         newDie = document.createElement('div');
         newDie.className = 'die';
         newDie.textContent = this.value;
+        this.div = newDie;
         diceContainer.appendChild(newDie);
     }
     roll = () => {
