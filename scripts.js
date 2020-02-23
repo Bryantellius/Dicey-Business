@@ -6,9 +6,12 @@ let feedback = document.getElementById('feedback');
 let newDie;
 let dieArr = [];
 
+let clearFeedback = () => feedback.textContent = ' ';
+
 generatorBtn.addEventListener('click', () => {
     let die = new Die();
     console.log(die);
+    clearFeedback();
 })
 
 rollBtn.addEventListener('click', () => {
@@ -17,6 +20,7 @@ rollBtn.addEventListener('click', () => {
         object.value = Math.round(Math.random() * (6 - 1) + 1);
         object.div.textContent = object.value;
     })
+    clearFeedback();
 })
 
 sumBtn.addEventListener('click', () => {
@@ -45,6 +49,7 @@ class Die {
             this.roll();
             this.div.textContent = this.value;
             event.preventDefault();
+            clearFeedback();
         })
         newDie.addEventListener('dblclick', () => {
             this.div.remove();
@@ -53,7 +58,7 @@ class Die {
                     dieArr = dieArr.filter((object) => !(object === this));
                 }
             })
-
+            clearFeedback();
         })
         this.div = newDie;
         diceContainer.appendChild(newDie);
