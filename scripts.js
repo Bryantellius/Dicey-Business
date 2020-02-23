@@ -2,6 +2,8 @@ let diceContainer = document.getElementById('diceContainer');
 let generatorBtn = document.getElementById('generatorBtn');
 let rollBtn = document.getElementById('rollBtn');
 let sumBtn = document.getElementById('sumBtn');
+let styleBtn = document.getElementById('styleBtn');
+let orderBtn = document.getElementById('orderBtn');
 let feedback = document.getElementById('feedback');
 let newDie;
 let dieArr = [];
@@ -25,11 +27,15 @@ rollBtn.addEventListener('click', () => {
 
 sumBtn.addEventListener('click', () => {
     const sum = (acc, object) => acc + object.value;
-    if(dieArr.length===1){
+    if (dieArr.length === 1) {
         feedback.textContent = "The die's value is " + dieArr[0].value;
-    }else{
+    } else {
         feedback.textContent = 'The sum of the dice = ' + dieArr.reduce(sum, 0);
     }
+})
+
+orderBtn.addEventListener('click', () => {
+    
 })
 
 class Die {

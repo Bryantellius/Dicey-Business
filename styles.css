@@ -10,5 +10,8 @@
 }
 #feedback{
     margin: 0em;
-    font-size: 24px;
+    font-size: 1.5rem;
+}
+button{
+    width: 75%;
 }
